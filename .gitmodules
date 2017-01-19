@@ -1,0 +1,126 @@
+[submodule "bundle/vim-surround"]
+	path = bundle/vim-surround
+	url = https://github.com/tpope/vim-surround.git
+[submodule "bundle/vim-repeat"]
+	path = bundle/vim-repeat
+	url = https://github.com/tpope/vim-repeat.git
+[submodule "bundle/vimwiki"]
+	path = bundle/vimwiki
+	url = https://github.com/vimwiki/vimwiki.git
+[submodule "bundle/asyncrun.vim"]
+	path = bundle/asyncrun.vim
+	url = https://github.com/skywind3000/asyncrun.vim.git
+[submodule "bundle/calendar.vim"]
+	path = bundle/calendar.vim
+	url = https://github.com/itchyny/calendar.vim.git
+[submodule "bundle/delimitMate"]
+	path = bundle/delimitMate
+	url = https://github.com/Raimondi/delimitMate.git
+[submodule "bundle/asynccommand"]
+	path = bundle/asynccommand
+	url = https://github.com/idbrii/AsyncCommand.git
+[submodule "bundle/despacio"]
+	path = bundle/despacio
+	url = https://github.com/AlessandroYorba/Despacio.git
+[submodule "bundle/emmet-vim"]
+	path = bundle/emmet-vim
+	url = https://github.com/mattn/emmet-vim.git
+[submodule "bundle/nerdtree"]
+	path = bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "bundle/nrrwrgn"]
+	path = bundle/nrrwrgn
+	url = https://github.com/chrisbra/NrrwRgn.git
+[submodule "bundle/phpfolding"]
+	path = bundle/phpfolding
+	url = https://github.com/gcorne/phpfolding.vim.git
+[submodule "bundle/recover.vim"]
+	path = bundle/recover.vim
+	url = https://github.com/chrisbra/Recover.vim.git
+[submodule "bundle/scratch.vim"]
+	path = bundle/scratch.vim
+	url = https://github.com/mtth/scratch.vim.git
+[submodule "bundle/simpylfold"]
+	path = bundle/simpylfold
+	url = https://github.com/tmhedberg/SimpylFold.git
+[submodule "bundle/supertab"]
+	path = bundle/supertab
+	url = https://github.com/ervandew/supertab.git
+[submodule "bundle/syntaxrange"]
+	path = bundle/syntaxrange
+	url = https://github.com/vim-scripts/SyntaxRange.git
+[submodule "bundle/tabular"]
+	path = bundle/tabular
+	url = https://github.com/godlygeek/tabular.git
+[submodule "bundle/tagbar"]
+	path = bundle/tagbar
+	url = https://github.com/majutsushi/tagbar.git
+[submodule "bundle/targets.vim"]
+	path = bundle/targets.vim
+	url = https://github.com/wellle/targets.vim.git
+[submodule "bundle/tlib.vim"]
+	path = bundle/tlib.vim
+	url = https://github.com/tomtom/tlib_vim.git
+[submodule "bundle/utl.vim"]
+	path = bundle/utl.vim
+	url = https://github.com/vim-scripts/utl.vim.git
+[submodule "bundle/todo.txt-vim"]
+	path = bundle/todo.txt-vim
+	url = https://github.com/freitass/todo.txt-vim.git
+[submodule "bundle/vim-addon-mw-utils"]
+	path = bundle/vim-addon-mw-utils
+	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
+[submodule "bundle/vim-airline"]
+	path = bundle/vim-airline
+	url = https://github.com/vim-airline/vim-airline.git
+[submodule "bundle/vim-colors-solarized"]
+	path = bundle/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized.git
+[submodule "bundle/vim-commentary"]
+	path = bundle/vim-commentary
+	url = https://github.com/tpope/vim-commentary.git
+[submodule "bundle/vim-cool"]
+	path = bundle/vim-cool
+	url = https://github.com/romainl/vim-cool.git
+[submodule "bundle/vim-dispatch"]
+	path = bundle/vim-dispatch
+	url = https://github.com/tpope/vim-dispatch.git
+[submodule "bundle/vim-do"]
+	path = bundle/vim-do
+	url = https://github.com/joonty/vim-do.git
+[submodule "bundle/vim-dotoo"]
+	path = bundle/vim-dotoo
+	url = https://github.com/dhruvasagar/vim-dotoo.git
+[submodule "bundle/vim-easymotion"]
+	path = bundle/vim-easymotion
+	url = https://github.com/easymotion/vim-easymotion.git
+[submodule "bundle/vim-fugitive"]
+	path = bundle/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "bundle/vim-indent-object"]
+	path = bundle/vim-indent-object
+	url = https://github.com/michaeljsmith/vim-indent-object.git
+[submodule "bundle/vim-javascript"]
+	path = bundle/vim-javascript
+	url = https://github.com/pangloss/vim-javascript.git
+[submodule "bundle/vim-json"]
+	path = bundle/vim-json
+	url = https://github.com/elzr/vim-json.git
+[submodule "bundle/vim-misc"]
+	path = bundle/vim-misc
+	url = https://github.com/xolox/vim-misc.git
+[submodule "bundle/vim-nerdtree-tabs"]
+	path = bundle/vim-nerdtree-tabs
+	url = https://github.com/jistr/vim-nerdtree-tabs.git
+[submodule "bundle/vim-orgmode"]
+	path = bundle/vim-orgmode
+	url = https://github.com/jceb/vim-orgmode.git
+[submodule "bundle/vim-shell-executor"]
+	path = bundle/vim-shell-executor
+	url = https://github.com/JarrodCTaylor/vim-shell-executor.git
+[submodule "bundle/vimshell.vim"]
+	path = bundle/vimshell.vim
+	url = https://github.com/Shougo/vimshell.vim.git
+[submodule "bundle/vim-speeddating"]
+	path = bundle/vim-speeddating
+	url = https://github.com/tpope/vim-speeddating.git
