@@ -4,7 +4,7 @@
 "              newbie, basing your first .vimrc on this file is a good choice.
 "              If you're a more advanced user, building your own .vimrc based
 "              on this file is still a good idea.
-
+ 
 "------------------------------------------------------------
 " Features {{{1
 "
@@ -15,16 +15,18 @@
 " have made, as well as sanely reset options when re-sourcing .vimrc
 set nocompatible
 
-" Pathogen plugin
-execute pathogen#infect()
-Helptags
-" Enable syntax highlighting
-syntax on
-
 " Attempt to determine the type of a file based on its name and possibly its
 " contents. Use this to allow intelligent auto-indenting for each filetype,
 " and for plugins that are filetype specific.
 filetype indent plugin on
+
+" Enable syntax highlighting
+syntax on
+
+" Pathogen plugin
+execute pathogen#infect()
+syntax on
+filetype plugin indent on
 
 "------------------------------------------------------------
 " Must have options {{{1
@@ -130,7 +132,7 @@ set number
 set notimeout ttimeout ttimeoutlen=200
  
 " Use <F11> to toggle between 'paste' and 'nopaste'
-"set pastetoggle=<F11>
+set pastetoggle=<F11>
 
 " Set backtick to serve as the escape key to prevent RSI
 " :imap ` <Esc>
@@ -141,16 +143,11 @@ xnoremap P Pgvy
 
 " Default theme
 if has("gui_running")
-let despacio_Campfire = 1
-" colorscheme eva
-let g:solarized_contrast="high"    "default value is normal
-let g:solarized_visibility="high"    "default value is normal
-let g:solarized_hitrail=1    "default value is 0
-colorscheme solarized
+    set background=dark
+    colorscheme solarized
 end
 
 " Font and Fontsize
-" set guifont=Courier_New:h11
 set guifont=Consolas:h11
 
 " Windows splitting
@@ -205,46 +202,35 @@ let g:scratch_top = 0
 let g:airline_section_y = airline#section#create(['ffenc', '%{strftime("%Y-%m-%dT%H:%M:%S")}'])
 
 " NERDTree things
-let NERDTreeShowBookmarks=1
-map <Leader>n <plug>NERDTreeTabsToggle<CR>
-"resizing splits
+autocmd VimEnter * NERDTree
+
+" automatically close nerdtree
+function! NERDTreeQuit()
+  redir => buffersoutput
+  silent buffers
+  redir END
+"                     1BufNo  2Mods.     3File           4LineNo
+  let pattern = '^\s*\(\d\+\)\(.....\) "\(.*\)"\s\+line \(\d\+\)$'
+  let windowfound = 0
+
+  for bline in split(buffersoutput, "\n")
+    let m = matchlist(bline, pattern)
+
+    if (len(m) > 0)
+      if (m[2] =~ '..a..')
+        let windowfound = 1
+      endif
+    endif
+  endfor
+
+  if (!windowfound)
+    quitall
+  endif
+endfunction
+autocmd WinEnter * call NERDTreeQuit()
 
 " Statusline
 set statusline=%{fugitive#statusline()}
 
-" split edition functions
-function! MarkWindowSwap()
-    let g:markedWinNum = winnr()
-endfunction
-
-function! DoWindowSwap()
-    "Mark destination
-    let curNum = winnr()
-    let curBuf = bufnr( "%" )
-    exe g:markedWinNum . "wincmd w"
-    "Switch to source and shuffle dest->source
-    let markedBuf = bufnr( "%" )
-    "Hide and open so that we aren't prompted and keep history
-    exe 'hide buf' curBuf
-    "Switch to dest and shuffle source->dest
-    exe curNum . "wincmd w"
-    "Hide and open so that we aren't prompted and keep history
-    exe 'hide buf' markedBuf 
-endfunction
-
-nmap <silent> <leader>mw :call MarkWindowSwap()<CR>
-nmap <silent> <leader>pw :call DoWindowSwap()<CR>
-
-" fullscreen plugin
-let g:shell_fullscreen_items = 'mT'
-
-" Maps Alt-[h,j,k,l] to resizing a window split
-set winheight=30
-
-nnoremap <A-Up>     <C-w>-
-nnoremap <A-Down>   <C-W>+
-nnoremap <A-Left>   <C-W>>
-nnoremap <A-Right>  <C-w><
-
-"vim-json settings
-let g:vim_json_syntax_conceal = 0
+"Journal things
+"let g:journal_encrypted = 1
