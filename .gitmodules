@@ -118,9 +118,9 @@
 [submodule "bundle/vim-speeddating"]
 	path = bundle/vim-speeddating
 	url = https://github.com/tpope/vim-speeddating.git
-[submodule "asyncrun.vim"]
-	path = asyncrun.vim
-	url = https://github.com/skywind3000/asyncrun.vim.git
-[submodule "asynccommand"]
-	path = asynccommand
+[submodule "bundle/asynccommand.vim"]
+	path = bundle/asynccommand.vim
 	url = https://github.com/idbrii/AsyncCommand
+[submodule "bundle/asyncrun"]
+	path = bundle/asyncrun
+	url = https://github.com/skywind3000/asyncrun.vim
