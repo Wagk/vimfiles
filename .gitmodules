@@ -124,3 +124,6 @@
 [submodule "bundle/asyncrun"]
 	path = bundle/asyncrun
 	url = https://github.com/skywind3000/asyncrun.vim
+[submodule "bundle/vim-gitgutter"]
+	path = bundle/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter
