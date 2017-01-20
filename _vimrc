@@ -24,9 +24,9 @@ filetype indent plugin on
 syntax on
 
 " Pathogen plugin
-execute pathogen#infect()
+call pathogen#infect()
+call pathogen#helptags()
 syntax on
-filetype plugin indent on
 
 "------------------------------------------------------------
 " Must have options {{{1
@@ -202,7 +202,7 @@ let g:scratch_top = 0
 let g:airline_section_y = airline#section#create(['ffenc', '%{strftime("%Y-%m-%dT%H:%M:%S")}'])
 
 " NERDTree things
-autocmd VimEnter * NERDTree
+"autocmd VimEnter * NERDTree
 
 " automatically close nerdtree
 function! NERDTreeQuit()
@@ -234,3 +234,10 @@ set statusline=%{fugitive#statusline()}
 
 "Journal things
 "let g:journal_encrypted = 1
+
+" pymode things
+let g:pymode_python = 'python3'
+let g:pymode_options_colorcolumn = 0
+let g:pymode_quickfix_minheight = 5
+let g:pymode_quickfix_maxheight = 10
+let g:pymode_lint_checkers = ['pyflakes', 'mccabe']
