@@ -157,3 +157,6 @@
 [submodule "bundle/vim-indent-guides"]
 	path = bundle/vim-indent-guides
 	url = git://github.com/nathanaelkane/vim-indent-guides.git
+[submodule "bundle/dockerfile.vim"]
+	path = bundle/dockerfile.vim
+	url = https://github.com/ekalinin/dockerfile.vim
