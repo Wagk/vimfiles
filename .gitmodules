@@ -43,9 +43,6 @@
 [submodule "bundle/syntaxrange"]
 	path = bundle/syntaxrange
 	url = https://github.com/vim-scripts/SyntaxRange.git
-[submodule "bundle/tabular"]
-	path = bundle/tabular
-	url = https://github.com/godlygeek/tabular.git
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
 	url = https://github.com/majutsushi/tagbar.git
@@ -160,3 +157,6 @@
 [submodule "bundle/dockerfile.vim"]
 	path = bundle/dockerfile.vim
 	url = https://github.com/ekalinin/dockerfile.vim
+[submodule "bundle/vim-easy-align"]
+	path = bundle/vim-easy-align
+	url = https://github.com/junegunn/vim-easy-align
