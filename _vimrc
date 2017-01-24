@@ -240,6 +240,7 @@ let g:pymode_python = 'python3'
 let g:pymode_options_colorcolumn = 0
 let g:pymode_quickfix_minheight = 5
 let g:pymode_quickfix_maxheight = 10
+let g:pymode_doc = 0
 let g:pymode_lint_checkers = ['pyflakes', 'mccabe']
 
 " Maps Alt-[h,j,k,l] to resizing a window split
@@ -247,3 +248,8 @@ map <silent> <A-h> <C-w><
 map <silent> <A-j> <C-W>-
 map <silent> <A-k> <C-W>+
 map <silent> <A-l> <C-w>>
+
+" Easyalign mappings
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
+
