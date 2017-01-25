@@ -160,3 +160,9 @@
 [submodule "bundle/vim-easy-align"]
 	path = bundle/vim-easy-align
 	url = https://github.com/junegunn/vim-easy-align
+[submodule "bundle/numbers.vim"]
+	path = bundle/numbers.vim
+	url = https://github.com/myusuf3/numbers.vim
+[submodule "bundle/vim-signature"]
+	path = bundle/vim-signature
+	url = https://github.com/kshenoy/vim-signature
