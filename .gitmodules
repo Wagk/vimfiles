@@ -169,9 +169,6 @@
 [submodule "bundle/vim-expand-region"]
 	path = bundle/vim-expand-region
 	url = https://github.com/terryma/vim-expand-region
-[submodule "bundle/text-objectify"]
-	path = bundle/text-objectify
-	url = https://github.com/paradigm/TextObjectify
 [submodule "bundle/vim-session"]
 	path = bundle/vim-session
 	url = https://github.com/xolox/vim-session
