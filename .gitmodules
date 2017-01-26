@@ -163,3 +163,18 @@
 [submodule "bundle/vim-signature"]
 	path = bundle/vim-signature
 	url = https://github.com/kshenoy/vim-signature
+[submodule "bundle/vim-changes"]
+	path = bundle/vim-changes
+	url = https://github.com/chrisbra/changesPlugin
+[submodule "bundle/vim-expand-region"]
+	path = bundle/vim-expand-region
+	url = https://github.com/terryma/vim-expand-region
+[submodule "bundle/text-objectify"]
+	path = bundle/text-objectify
+	url = https://github.com/paradigm/TextObjectify
+[submodule "bundle/vim-session"]
+	path = bundle/vim-session
+	url = https://github.com/xolox/vim-session
+[submodule "bundle/vim-windowswap"]
+	path = bundle/vim-windowswap
+	url = https://github.com/wesQ3/vim-windowswap
