@@ -242,6 +242,7 @@ let g:pymode_quickfix_minheight = 5
 let g:pymode_quickfix_maxheight = 10
 let g:pymode_doc = 0
 let g:pymode_lint_checkers = ['pyflakes', 'mccabe']
+let g:pymode_rope = 0
 
 " Maps Alt-[h,j,k,l] to resizing a window split
 map <silent> <A-h> <C-w><
@@ -252,4 +253,14 @@ map <silent> <A-l> <C-w>>
 " Easyalign mappings
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
+
+" windowswap bindings
+let g:windowswap_map_keys = 0 "prevent default bindings
+nnoremap <silent> <leader>yw :call WindowSwap#MarkWindowSwap()<CR>
+nnoremap <silent> <leader>pw :call WindowSwap#DoWindowSwap()<CR>
+nnoremap <silent> <leader>sw :call WindowSwap#EasyWindowSwap()<CR>
+
+" session
+let g:session_autosave = 'no'
+let g:session_autoload = 'no'
 
