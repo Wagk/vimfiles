@@ -264,3 +264,5 @@ nnoremap <silent> <leader>sw :call WindowSwap#EasyWindowSwap()<CR>
 let g:session_autosave = 'no'
 let g:session_autoload = 'no'
 
+"encryption
+set cm=blowfish2
