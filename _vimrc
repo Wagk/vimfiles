@@ -188,6 +188,7 @@ set textwidth=0
 
 " vimwiki things
 let g:vimwiki_folding = 'list'
+let g:vimwiki_list = [{'auto_toc': 1}]
 
 " turn on delimitMate
 let delimitMate_expand_cr = 1
@@ -264,5 +265,9 @@ nnoremap <silent> <leader>sw :call WindowSwap#EasyWindowSwap()<CR>
 let g:session_autosave = 'no'
 let g:session_autoload = 'no'
 
-"encryption
+" Calender
+let g:calendar_google_calendar = 1
+let g:calendar_google_task = 1
+
+" encryption things
 set cm=blowfish2
