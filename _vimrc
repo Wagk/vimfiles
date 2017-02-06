@@ -138,8 +138,8 @@ set pastetoggle=<F11>
 " :imap ` <Esc>
 
 " Let me paste things repeatedly
-"xnoremap p pgvy
-"xnoremap P Pgvy
+xnoremap p pgvy
+xnoremap P Pgvy
 
 " Default theme
 if has("gui_running")
@@ -188,7 +188,7 @@ set textwidth=0
 
 " vimwiki things
 let g:vimwiki_folding = 'expr'
-"let g:vimwiki_list = [{'auto_toc': 1}] " laggy af
+let g:vimwiki_list = [{'path': '~/vimwiki/', 'auto_toc': 1, 'auto_tags': 1}]
 
 " turn on delimitMate
 let delimitMate_expand_cr = 1
@@ -253,14 +253,11 @@ set cm=blowfish2
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-let g:syntastic_python_flake8_quiet_messages = {
-			\ "level" : "errors",
-			\ "type" : "style",
-			\ "regex" : 'E221',
-			\ "file" : '.py'
-			\ }
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+" autoformatter things
+let g:formatter_yapf_style = 'google'
