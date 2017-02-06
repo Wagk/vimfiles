@@ -90,7 +90,7 @@ set backspace=indent,eol,start
 set autoindent
 
 " Use space instead of tabs, 
-set expandtab
+"set expandtab
 set tabstop=4 
 set shiftwidth=4
  
@@ -122,7 +122,7 @@ set t_vb=
 set mouse=a
  
 " Set the command window height to 2 lines, to avoid many cases of having to
-" "press <Enter> to continue"
+" press <Enter> to continue
 set cmdheight=2
  
 " Display line numbers on the left
@@ -138,8 +138,8 @@ set pastetoggle=<F11>
 " :imap ` <Esc>
 
 " Let me paste things repeatedly
-xnoremap p pgvy
-xnoremap P Pgvy
+"xnoremap p pgvy
+"xnoremap P Pgvy
 
 " Default theme
 if has("gui_running")
@@ -187,8 +187,8 @@ set wrap!
 set textwidth=0
 
 " vimwiki things
-let g:vimwiki_folding = 'list'
-let g:vimwiki_list = [{'auto_toc': 1}]
+let g:vimwiki_folding = 'expr'
+"let g:vimwiki_list = [{'auto_toc': 1}] " laggy af
 
 " turn on delimitMate
 let delimitMate_expand_cr = 1
@@ -203,46 +203,23 @@ let g:scratch_top = 0
 let g:airline_section_y = airline#section#create(['ffenc', '%{strftime("%Y-%m-%dT%H:%M:%S")}'])
 
 " NERDTree things
-"autocmd VimEnter * NERDTree
-
-" automatically close nerdtree
-function! NERDTreeQuit()
-  redir => buffersoutput
-  silent buffers
-  redir END
-"                     1BufNo  2Mods.     3File           4LineNo
-  let pattern = '^\s*\(\d\+\)\(.....\) "\(.*\)"\s\+line \(\d\+\)$'
-  let windowfound = 0
-
-  for bline in split(buffersoutput, "\n")
-    let m = matchlist(bline, pattern)
-
-    if (len(m) > 0)
-      if (m[2] =~ '..a..')
-        let windowfound = 1
-      endif
-    endif
-  endfor
-
-  if (!windowfound)
-    quitall
-  endif
-endfunction
-autocmd WinEnter * call NERDTreeQuit()
+" let loaded_nerd_tree=1
+nnoremap <silent> <leader>n :NERDTreeToggle<CR>
 
 " Statusline
 set statusline=%{fugitive#statusline()}
+nnoremap <silent> <leader>g :Gstatus<CR>
 
 "Journal things
 "let g:journal_encrypted = 1
 
 " pymode things
-let g:pymode_python = 'python3'
+"let g:pymode_python = 'python3'
+let g:pymode_python = 'disable'
 let g:pymode_options_colorcolumn = 0
 let g:pymode_quickfix_minheight = 5
 let g:pymode_quickfix_maxheight = 10
 let g:pymode_doc = 0
-let g:pymode_lint_checkers = ['pyflakes', 'mccabe']
 let g:pymode_rope = 0
 
 " Maps Alt-[h,j,k,l] to resizing a window split
@@ -271,3 +248,19 @@ let g:calendar_google_task = 1
 
 " encryption things
 set cm=blowfish2
+
+" syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_python_flake8_quiet_messages = {
+			\ "level" : "errors",
+			\ "type" : "style",
+			\ "regex" : 'E221',
+			\ "file" : '.py'
+			\ }
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
