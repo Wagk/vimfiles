@@ -187,8 +187,14 @@ set wrap!
 set textwidth=0
 
 " vimwiki things
+let wiki = {}
+let wiki.path = '~/Vimwiki/'
+let wiki.auto_toc = 1 
+let wiki.auto_tags = 1
+let wiki.syntax = 'markdown'
+
 let g:vimwiki_folding = 'expr'
-let g:vimwiki_list = [{'path': '~/vimwiki/', 'auto_toc': 1, 'auto_tags': 1}]
+let g:vimwiki_list = [wiki]
 
 " turn on delimitMate
 let delimitMate_expand_cr = 1
