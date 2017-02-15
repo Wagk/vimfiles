@@ -184,9 +184,9 @@
 [submodule "bundle/vim-notes"]
 	path = bundle/vim-notes
 	url = https://github.com/xolox/vim-notes
-[submodule "bundle/jedi-vim"]
-	path = bundle/jedi-vim
-	url = https://github.com/davidhalter/jedi-vim
 [submodule "bundle/vim-autoformat"]
 	path = bundle/vim-autoformat
 	url = https://github.com/Chiel92/vim-autoformat
+[submodule "bundle/vim-drawit"]
+	path = bundle/vim-drawit
+	url = https://github.com/vim-scripts/DrawIt.git
