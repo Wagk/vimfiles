@@ -278,3 +278,6 @@ augroup END
 
 " better whitespace settings
 autocmd BufEnter * EnableStripWhitespaceOnSave
+
+" Easymotion things
+map <Space><Space> <Plug>(easymotion-prefix)
