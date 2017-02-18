@@ -215,7 +215,7 @@ nnoremap <silent> <leader>n :NERDTreeToggle<CR>
 
 " Statusline
 set statusline=%{fugitive#statusline()}
-nnoremap <silent> <leader>g :Gstatus<CR>
+nnoremap <silent> <leader><Space> :Gstatus<CR>
 
 "Journal things
 "let g:journal_encrypted = 1
