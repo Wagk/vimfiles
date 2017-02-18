@@ -281,3 +281,4 @@ autocmd BufEnter * EnableStripWhitespaceOnSave
 
 " Easymotion things
 map <Space><Space> <Plug>(easymotion-prefix)
+map <Space><Space><Space> <Plug>(easymotion-jumptoanywhere)
