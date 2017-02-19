@@ -271,7 +271,8 @@ let g:syntastic_python_flake8_args='--ignore=E501,E221'
 let g:formatter_yapf_style = 'google'
 
 " AsyncRun
-nnoremap <leader>a :AsyncRun<Space>
+nnoremap <leader>! :AsyncRun<Space>
+noremap <F9> :call asyncrun#quickfix_toggle(8)<cr>
 augroup vimrc
     autocmd User AsyncRunStart call asyncrun#quickfix_toggle(8, 1)
 augroup END
