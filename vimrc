@@ -211,7 +211,7 @@ let g:airline_section_error = airline#section#create_right(['%{g:asyncrun_status
 
 " NERDTree things
 " let loaded_nerd_tree=1
-nnoremap <silent> <leader>n :NERDTreeToggle<CR>
+nnoremap <silent> <F2> :NERDTreeToggle<CR>
 
 " Statusline
 set statusline=%{fugitive#statusline()}
