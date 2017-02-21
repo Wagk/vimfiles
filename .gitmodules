@@ -208,3 +208,6 @@
 [submodule "bundle/vim-airline-themes"]
 	path = bundle/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes.git
+[submodule "bundle/vim-airline-clock"]
+	path = bundle/vim-airline-clock
+	url = https://github.com/enricobacis/vim-airline-clock.git

@@ -213,9 +213,11 @@ set autochdir
 let g:scratch_top = 0
 
 " airline things
-let g:airline_section_y = airline#section#create(['ffenc', '%{strftime("%Y-%m-%dT%H:%M:%S")}'])
+"let g:airline_section_y = airline#section#create(['ffenc', '%{strftime("%Y-%m-%dT%H:%M:%S")}'])
 let g:airline_section_error = airline#section#create_right(['%{g:asyncrun_status}'])
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#clock#format = '%Y-%m-%dT%H:%M:%S'
+let g:airline#extensions#clock#updatetime = 1000
 
 " NERDTree things
 " let loaded_nerd_tree=1
