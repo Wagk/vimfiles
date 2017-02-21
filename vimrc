@@ -275,14 +275,14 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_python_checkers=['flake8']
-let g:syntastic_python_flake8_args='--ignore=E501,E221'
+let g:syntastic_python_flake8_args='--ignore=E501,E221,E241'
 
 " autoformatter things
 let g:formatter_yapf_style = 'google'
 
 " AsyncRun
 nnoremap <leader>! :AsyncRun<Space>
-noremap <F9> :call asyncrun#quickfix_toggle(8)<cr>
+noremap <F3> :call asyncrun#quickfix_toggle(8)<cr>
 augroup vimrc
     autocmd User AsyncRunStart call asyncrun#quickfix_toggle(8, 1)
 augroup END
