@@ -163,19 +163,26 @@ let c_no_comment_fold = 1
 " Realtime updates
 set autoread
 
+set guioptions=
+" set guioptions-=m  "remove menu bar
+" set guioptions-=T  "remove toolbar
+" set guioptions-=r  "remove right-hand scroll bar
+" set guioptions-=L  "remove left-hand scroll bar
+" set guioptions-=M
+
 " Window launch size configuration
 if has("gui_running")
-  " GUI is running or is about to start.
-  " Maximize gvim window (for an alternative on Windows, see simalt below).
-  set lines=999 columns=999
+	" GUI is running or is about to start.
+	" Maximize gvim window (for an alternative on Windows, see simalt below).
+	set lines=999 columns=999
 else
-  " This is console Vim.
-  if exists("+lines")
-    set lines=50
-  endif
-  if exists("+columns")
-    set columns=100
-  endif
+	" This is console Vim.
+	if exists("+lines")
+		set lines=50
+	endif
+	if exists("+columns")
+		set columns=100
+	endif
 endif
 
 " Timestamp Keybindings
@@ -208,6 +215,7 @@ let g:scratch_top = 0
 " airline things
 let g:airline_section_y = airline#section#create(['ffenc', '%{strftime("%Y-%m-%dT%H:%M:%S")}'])
 let g:airline_section_error = airline#section#create_right(['%{g:asyncrun_status}'])
+let g:airline#extensions#tabline#enabled = 1
 
 " NERDTree things
 " let loaded_nerd_tree=1
