@@ -283,9 +283,9 @@ let g:formatter_yapf_style = 'google'
 " AsyncRun
 nnoremap <leader>! :AsyncRun<Space>
 noremap <F3> :call asyncrun#quickfix_toggle(8)<cr>
-augroup vimrc
-    autocmd User AsyncRunStart call asyncrun#quickfix_toggle(8, 1)
-augroup END
+"augroup vimrc
+    "autocmd User AsyncRunStart call asyncrun#quickfix_toggle(8, 1)
+"augroup END
 
 " better whitespace settings
 autocmd BufEnter * EnableStripWhitespaceOnSave
