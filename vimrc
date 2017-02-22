@@ -246,8 +246,8 @@ map <silent> <A-k> <C-W>+
 map <silent> <A-l> <C-w>>
 
 " Easyalign mappings
-xmap ga <Plug>(EasyAlign)
-nmap ga <Plug>(EasyAlign)
+vmap <leader>a <Plug>(EasyAlign)
+nmap <leader>a <Plug>(EasyAlign)
 
 " windowswap bindings
 let g:windowswap_map_keys = 0 "prevent default bindings
@@ -293,3 +293,6 @@ autocmd BufEnter * EnableStripWhitespaceOnSave
 " Easymotion things
 map <Space><Space> <Plug>(easymotion-prefix)
 map <Space><Space><Space> <Plug>(easymotion-jumptoanywhere)
+
+" anyfold
+let g:anyfold_activate=1
