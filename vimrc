@@ -296,3 +296,6 @@ map <Space><Space><Space> <Plug>(easymotion-jumptoanywhere)
 
 " anyfold
 let g:anyfold_activate=1
+
+"maps ctrl-J to break a line at that point
+nnoremap <NL> i<CR><ESC>
