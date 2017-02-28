@@ -229,3 +229,6 @@
 [submodule "bundle/vim-rsi"]
 	path = bundle/vim-rsi
 	url = https://github.com/tpope/vim-rsi.git
+[submodule "bundle/vim-gundo"]
+	path = bundle/vim-gundo
+	url = https://github.com/sjl/gundo.vim.git
