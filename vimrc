@@ -297,5 +297,15 @@ map <Space><Space><Space> <Plug>(easymotion-jumptoanywhere)
 " anyfold
 let g:anyfold_activate=1
 
-"maps ctrl-J to break a line at that point
+" maps ctrl-J to break a line at that point
 nnoremap <NL> i<CR><ESC>
+
+"s supertab things
+let g:SuperTabMappingForward = '<s-tab>'
+let g:SuperTabMappingBackward = '<tab>'
+
+" gundo
+nnoremap <F4> :GundoToggle<CR>
+
+" indent guides
+nnoremap <F1> :IndentGuidesToggle<CR>
