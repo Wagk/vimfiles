@@ -141,12 +141,6 @@ set pastetoggle=<F11>
 xnoremap p pgvy
 xnoremap P Pgvy
 
-" Default theme
-if has("gui_running")
-    set background=dark
-    colorscheme solarized
-end
-
 " Font and Fontsize
 set guifont=Consolas:h11
 
@@ -175,6 +169,10 @@ if has("gui_running")
 	" GUI is running or is about to start.
 	" Maximize gvim window (for an alternative on Windows, see simalt below).
 	set lines=999 columns=999
+	" Default theme
+    set background=dark
+    colorscheme solarized
+	let g:airline_theme='solarized'
 else
 	" This is console Vim.
 	if exists("+lines")
@@ -183,6 +181,10 @@ else
 	if exists("+columns")
 		set columns=100
 	endif
+	" Default theme
+	set background=dark
+	colorscheme despacio
+	let g:airline_theme='base16_default'
 endif
 
 " Timestamp Keybindings
@@ -217,7 +219,7 @@ let g:scratch_top = 0
 let g:airline_section_error = airline#section#create_right(['%{g:asyncrun_status}'])
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#clock#format = '%Y-%m-%dT%H:%M:%S'
-let g:airline#extensions#clock#updatetime = 1000
+let g:airline#extensions#clock#updatetime = 500
 
 " NERDTree things
 " let loaded_nerd_tree=1
