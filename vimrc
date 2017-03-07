@@ -74,7 +74,7 @@ call plug#begin()
 	Plug 'skywind3000/asyncrun.vim'
 	Plug 'terryma/vim-expand-region'
 	Plug 'terryma/vim-multiple-cursors'
-	Plug 'thanthese/Tortoise-Typing'
+	"Plug 'thanthese/Tortoise-Typing' " needs python 2.7
 	Plug 'tmhedberg/SimpylFold'
 	Plug 'tommcdo/vim-exchange'
 	Plug 'tomtom/tlib_vim'
