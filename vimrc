@@ -28,6 +28,7 @@ call plug#begin()
 	"Plug 'JarrodCTaylor/vim-shell-executor'
 	"Plug 'Shougo/vimshell.vim'
 	"Plug 'chrisbra/NrrwRgn'
+	"Plug 'chrisbra/changesPlugin' "gutter highlighting like gitgutter, but blockwise
 	"Plug 'dhruvasagar/vim-dotoo'
 	"Plug 'https:/hub.com/freitass/todo.txt-vim'
 	"Plug 'idbrii/AsyncCommand'
@@ -46,7 +47,6 @@ call plug#begin()
 	Plug 'airblade/vim-gitgutter'
 	Plug 'altercation/vim-colors-solarized'
 	Plug 'chrisbra/Recover.vim'
-	Plug 'chrisbra/changesPlugin' "gutter highlighting like gitgutter, but blockwise
 	Plug 'ctrlpvim/ctrlp.vim'
 	Plug 'easymotion/vim-easymotion'
 	Plug 'ekalinin/dockerfile.vim'
@@ -58,6 +58,7 @@ call plug#begin()
 	Plug 'guns/vim-sexp'
 	Plug 'idanarye/vim-terminalogy'
 	Plug 'itchyny/calendar.vim'
+	Plug 'jceb/vim-orgmode'
 	Plug 'junegunn/vim-easy-align'
 	Plug 'kamwitsta/mythos'
 	Plug 'kshenoy/vim-signature'
