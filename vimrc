@@ -25,6 +25,7 @@ syntax on
 
 " vim-plug
 call plug#begin()
+	"Plug 'JarrodCTaylor/vim-shell-executor'
 	"Plug 'Shougo/vimshell.vim'
 	"Plug 'chrisbra/NrrwRgn'
 	"Plug 'dhruvasagar/vim-dotoo'
@@ -34,17 +35,18 @@ call plug#begin()
 	"Plug 'jceb/vim-orgmode'
 	"Plug 'joonty/vim-do'
 	"Plug 'mtth/scratch.vim'
+	"Plug 'thanthese/Tortoise-Typing' " needs python 2.7
+	"Plug 'uguu-org/vim-matrix-screensaver'
 	Plug 'AlessandroYorba/Despacio'
 	Plug 'AndrewRadev/splitjoin.vim'
 	Plug 'Chiel92/vim-autoformat'
-	Plug 'JarrodCTaylor/vim-shell-executor'
 	Plug 'MarcWeber/vim-addon-mw-utils'
 	Plug 'Raimondi/delimitMate'
 	Plug 'Xuyuanp/nerdtree-git-plugin'
 	Plug 'airblade/vim-gitgutter'
 	Plug 'altercation/vim-colors-solarized'
 	Plug 'chrisbra/Recover.vim'
-	Plug 'chrisbra/changesPlugin'
+	Plug 'chrisbra/changesPlugin' "gutter highlighting like gitgutter, but blockwise
 	Plug 'ctrlpvim/ctrlp.vim'
 	Plug 'easymotion/vim-easymotion'
 	Plug 'ekalinin/dockerfile.vim'
@@ -74,8 +76,8 @@ call plug#begin()
 	Plug 'skywind3000/asyncrun.vim'
 	Plug 'terryma/vim-expand-region'
 	Plug 'terryma/vim-multiple-cursors'
-	"Plug 'thanthese/Tortoise-Typing' " needs python 2.7
 	Plug 'tmhedberg/SimpylFold'
+	Plug 'tomasiser/vim-code-dark'
 	Plug 'tommcdo/vim-exchange'
 	Plug 'tomtom/tlib_vim'
 	Plug 'tpope/vim-abolish'
@@ -238,6 +240,9 @@ set guioptions=
 " set guioptions-=r  "remove right-hand scroll bar
 " set guioptions-=L  "remove left-hand scroll bar
 " set guioptions-=M
+
+" yank straight to system clipboard
+set clipboard=unnamed
 
 " Window launch size configuration
 if has("gui_running")
