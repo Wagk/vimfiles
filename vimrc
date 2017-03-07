@@ -94,7 +94,6 @@ call plug#begin()
 	Plug 'tpope/vim-speeddating'
 	Plug 'tpope/vim-surround'
 	Plug 'tpope/vim-unimpaired'
-	Plug 'uguu-org/vim-matrix-screensaver'
 	Plug 'vim-airline/vim-airline'
 	Plug 'vim-airline/vim-airline-themes'
 	Plug 'vim-scripts/DrawIt'
