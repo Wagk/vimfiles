@@ -307,15 +307,15 @@ nnoremap <silent> <leader><Space> :Gstatus<CR>
 
 " nerdtree-git-plugin things
 let g:NERDTreeIndicatorMapCustom = {
-    \ "Modified"  : "#",
+    \ "Modified"  : "~",
     \ "Staged"    : "+",
     \ "Untracked" : "*",
-    \ "Renamed"   : "R",
-    \ "Unmerged"  : "═",
+    \ "Renamed"   : "r",
+    \ "Unmerged"  : "!",
     \ "Deleted"   : "-",
-    \ "Dirty"     : "~",
+    \ "Dirty"     : ".",
     \ "Clean"     : " ",
-    \ "Ignored"   : "X",
+    \ "Ignored"   : "x",
     \ "Unknown"   : "?"
     \ }
 
