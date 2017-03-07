@@ -297,10 +297,6 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#clock#format = '%Y-%m-%dT%H:%M:%S'
 let g:airline#extensions#clock#updatetime = 500
 
-" NERDTree things
-" let loaded_nerd_tree=1
-nnoremap <silent> <F2> :NERDTreeToggle<CR>
-
 " Statusline
 set statusline=%{fugitive#statusline()}
 nnoremap <silent> <leader><Space> :Gstatus<CR>
@@ -372,13 +368,6 @@ let g:syntastic_python_flake8_args='--ignore=E501,E221,E241'
 " autoformatter things
 let g:formatter_yapf_style = 'google'
 
-" AsyncRun
-nnoremap <leader>! :AsyncRun<Space>
-noremap <F3> :call asyncrun#quickfix_toggle(8)<cr>
-"augroup vimrc
-    "autocmd User AsyncRunStart call asyncrun#quickfix_toggle(8, 1)
-"augroup END
-
 " better whitespace settings
 autocmd BufEnter * EnableStripWhitespaceOnSave
 
@@ -397,7 +386,22 @@ let g:SuperTabMappingForward = '<s-tab>'
 let g:SuperTabMappingBackward = '<tab>'
 
 " tagbar things
-nmap <F4> :TagbarToggle<CR>
+nnoremap <F4> :TagbarToggle<CR>
+nnoremap <leader>t :TagbarToggle<CR>
 
 " indent guides
-nnoremap <F1> :IndentGuidesToggle<CR>
+nnoremap <F2> :IndentGuidesToggle<CR>
+nnoremap <leader>i :IndentGuidesToggle<CR>
+
+" NERDTree things
+nnoremap <silent> <F1> :NERDTreeToggle<CR>
+nnoremap <silent> <leader>n :NERDTreeToggle<CR>
+
+" AsyncRun
+nnoremap <leader>! :AsyncRun<Space>
+noremap <leader>c :call asyncrun#quickfix_toggle(8)<cr>
+noremap <F3> :call asyncrun#quickfix_toggle(8)<cr>
+augroup vimrc
+	autocmd User AsyncRunStart call asyncrun#quickfix_toggle(8, 1)
+augroup END
+
