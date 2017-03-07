@@ -41,7 +41,7 @@ call plug#begin()
 	Plug 'Xuyuanp/nerdtree-git-plugin'
 	Plug 'airblade/vim-gitgutter'
 	Plug 'altercation/vim-colors-solarized'
-	Plug 'chrisbra/NrrwRgn'
+	"Plug 'chrisbra/NrrwRgn'
 	Plug 'chrisbra/Recover.vim'
 	Plug 'chrisbra/changesPlugin'
 	Plug 'ctrlpvim/ctrlp.vim'
@@ -61,7 +61,7 @@ call plug#begin()
 	Plug 'majutsushi/tagbar'
 	Plug 'mattn/emmet-vim'
 	Plug 'michaeljsmith/vim-indent-object'
-	Plug 'mtth/scratch.vim'
+	"Plug 'mtth/scratch.vim'
 	Plug 'myusuf3/numbers.vim'
 	Plug 'nathanaelkane/vim-indent-guides'
 	Plug 'ntpeters/vim-better-whitespace'
@@ -210,9 +210,6 @@ set notimeout ttimeout ttimeoutlen=200
 " Use <F11> to toggle between 'paste' and 'nopaste'
 set pastetoggle=<F11>
 
-" Set backtick to serve as the escape key to prevent RSI
-" :imap ` <Esc>
-
 " Let me paste things repeatedly
 xnoremap p pgvy
 xnoremap P Pgvy
@@ -278,7 +275,7 @@ let wiki.auto_toc = 1
 let wiki.auto_tags = 1
 let wiki.syntax = 'markdown'
 
-let g:vimwiki_folding = 'expr'
+"let g:vimwiki_folding = 'expr'
 let g:vimwiki_list = [wiki]
 
 " turn on delimitMate
