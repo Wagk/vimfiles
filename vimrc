@@ -106,6 +106,7 @@ call plug#begin()
 	Plug 'xolox/vim-misc'
 	Plug 'xolox/vim-notes'
 	Plug 'xolox/vim-session'
+	Plug 'Zuckonit/vim-airline-tomato'
 call plug#end()
 
 "------------------------------------------------------------
@@ -396,3 +397,19 @@ augroup vimrc
 	autocmd User AsyncRunStart call asyncrun#quickfix_toggle(8, 1)
 augroup END
 
+" Pomodoro things
+"If you want to change the working time:
+let g:tomato#interval = 60 * 60
+"If you wat to change rest time:
+let g:tomato#rest_time = 20 * 60
+"If you want to change language(English or Chinese):
+"let g:tomato#lang = 'chinese'
+"If you want to change working text:
+"let g:tomato#remind = "?" (" \uf003 " if you are using awesome-terminal-fonts)
+"If you want to change rest text:
+"let g:tomato#restinfo = "?" (" \ue1f1 " if you are using awesome-terminal-fonts)
+"If you want to enable clock:
+let g:tomato#show_clock = 1
+"If you want to show a count down:
+let g:tomato#show_clock = 1
+let g:tomato#show_count_down = 1
