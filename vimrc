@@ -104,7 +104,16 @@ call plug#begin()
 	Plug 'xolox/vim-misc'
 	Plug 'xolox/vim-notes'
 	Plug 'xolox/vim-session'
-	Plug 'vim-scripts/a.vim'
+	Plug 'vim-scripts/a.vim'                " Swap between source and header files
+	Plug 'janko-m/vim-test'                 " Run test cases
+	Plug 'christoomey/vim-tmux-navigator'
+	Plug 'mattn/webapi-vim'                 " curl/wget tooling
+	Plug 'mbbill/undotree'                  " undo tree (like gundo)
+	Plug 'mhinz/vim-startify'               " startup page
+	Plug 'octol/vim-cpp-enhanced-highlight' " exactly what it says on the tin
+	Plug 'vim-scripts/OmniCppComplete'      " Look at the tin
+	Plug 'nelstrom/vim-visual-star-search'  " use  # and * on visual selections
+	Plug 'matze/vim-move'                   " Move visual blocks
 
 call plug#end()
 
@@ -334,14 +343,13 @@ let g:NERDTreeIndicatorMapCustom = {
     \ "Unknown"   : "?"
     \ }
 
-"Journal things
-"let g:journal_encrypted = 1
+"Journal things let g:journal_encrypted = 1
 
-" Maps Alt-[h,j,k,l] to resizing a window split
-map <silent> <A-h> <C-w><
-map <silent> <A-j> <C-W>-
-map <silent> <A-k> <C-W>+
-map <silent> <A-l> <C-w>>
+"" Maps Alt-[h,j,k,l] to resizing a window split
+"nnoremap <silent> <A-h> <C-w><
+"nnoremap <silent> <A-j> <C-w>-
+"nnoremap <silent> <A-k> <C-w>+
+"nnoremap <silent> <A-l> <C-w>>
 
 " Easyalign mappings
 vmap <leader>a <Plug>(EasyAlign)
@@ -399,7 +407,7 @@ let g:SuperTabMappingBackward = '<tab>'
 nnoremap <silent> <leader>m :TagbarToggle<CR>
 
 " indent guides
-nnoremap <leader>i :IndentGuidesToggle<CR>
+nnoremap <silent> <leader>i :IndentGuidesToggle<CR>
 
 " NERDTree things
 nnoremap <silent> <leader>n :NERDTreeToggle<CR>
