@@ -268,8 +268,8 @@ else
 endif
 
 " Timestamp Keybindings
-nmap <F5> i<C-R>=strftime("%Y-%m-%dT%H:%M:%S")<CR><Esc>
-imap <F5> <C-R>=strftime("%Y-%m-%dT%H:%M:%S")<CR>
+nmap <leader>t i<C-R>=strftime("%Y-%m-%dT%H:%M:%S")<CR><Esc>
+imap <leader>t <C-R>=strftime("%Y-%m-%dT%H:%M:%S")<CR>
 
 " No wordwrap
 set wrap!
@@ -389,22 +389,15 @@ nnoremap <NL> i<CR><ESC>
 let g:SuperTabMappingForward = '<s-tab>'
 let g:SuperTabMappingBackward = '<tab>'
 
-" tagbar things
-nnoremap <F4> :TagbarToggle<CR>
-nnoremap <leader>t :TagbarToggle<CR>
-
 " indent guides
-nnoremap <F2> :IndentGuidesToggle<CR>
 nnoremap <leader>i :IndentGuidesToggle<CR>
 
 " NERDTree things
-nnoremap <silent> <F1> :NERDTreeToggle<CR>
 nnoremap <silent> <leader>n :NERDTreeToggle<CR>
 
 " AsyncRun
 nnoremap <leader>! :AsyncRun<Space>
 noremap <leader>c :call asyncrun#quickfix_toggle(8)<cr>
-noremap <F3> :call asyncrun#quickfix_toggle(8)<cr>
 augroup vimrc
 	autocmd User AsyncRunStart call asyncrun#quickfix_toggle(8, 1)
 augroup END
