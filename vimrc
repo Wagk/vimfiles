@@ -106,7 +106,7 @@ call plug#begin()
 	Plug 'xolox/vim-misc'
 	Plug 'xolox/vim-notes'
 	Plug 'xolox/vim-session'
-	Plug 'Zuckonit/vim-airline-tomato'
+	Plug 'sheerun/vim-polyglot'
 call plug#end()
 
 "------------------------------------------------------------
@@ -235,6 +235,9 @@ let c_no_comment_fold = 1
 " Realtime updates
 set autoread
 
+" No swap files
+set noswapfile
+
 set guioptions=c
 " set guioptions-=m  "remove menu bar
 " set guioptions-=T  "remove toolbar
@@ -244,6 +247,9 @@ set guioptions=c
 
 " yank straight to system clipboard
 set clipboard=unnamed
+
+" some security vulnerability
+set nomodeline
 
 " Window launch size configuration
 if has("gui_running")
@@ -268,9 +274,12 @@ else
 	let g:airline_theme='base16_default'
 endif
 
+" Make <space> leader
+nnoremap <space> <nop>
+let mapleader="\<space>"
+
 " Timestamp Keybindings
-nmap <leader>t i<C-R>=strftime("%Y-%m-%dT%H:%M:%S")<CR><Esc>
-imap <leader>t <C-R>=strftime("%Y-%m-%dT%H:%M:%S")<CR>
+nnoremap <leader>t i<C-R>=strftime("%Y-%m-%dT%H:%M:%S")<CR><Esc>
 
 " No wordwrap
 set wrap!
@@ -304,7 +313,7 @@ let g:airline#extensions#clock#updatetime = 500
 
 " Statusline
 set statusline=%{fugitive#statusline()}
-nnoremap <silent> <leader><Space> :Gstatus<CR>
+nnoremap <silent> <leader>\ :Gstatus<CR>
 
 " nerdtree-git-plugin things
 let g:NERDTreeIndicatorMapCustom = {
@@ -368,8 +377,8 @@ let g:formatter_yapf_style = 'google'
 autocmd BufEnter * EnableStripWhitespaceOnSave
 
 " Easymotion things
-map <Space><Space> <Plug>(easymotion-prefix)
-map <Space><Space><Space> <Plug>(easymotion-jumptoanywhere)
+"map <Space><Space> <Plug>(easymotion-prefix)
+"map <Space><Space><Space> <Plug>(easymotion-jumptoanywhere)
 
 " anyfold
 let g:anyfold_activate=1
@@ -382,7 +391,7 @@ let g:SuperTabMappingForward = '<s-tab>'
 let g:SuperTabMappingBackward = '<tab>'
 
 " Tagbar things
-nnoremap <silent> <leader>N :TagbarToggle<CR>
+nnoremap <silent> <leader>m :TagbarToggle<CR>
 
 " indent guides
 nnoremap <leader>i :IndentGuidesToggle<CR>
@@ -396,20 +405,3 @@ noremap <leader>c :call asyncrun#quickfix_toggle(8)<cr>
 augroup vimrc
 	autocmd User AsyncRunStart call asyncrun#quickfix_toggle(8, 1)
 augroup END
-
-" Pomodoro things
-"If you want to change the working time:
-let g:tomato#interval = 60 * 60
-"If you wat to change rest time:
-let g:tomato#rest_time = 20 * 60
-"If you want to change language(English or Chinese):
-"let g:tomato#lang = 'chinese'
-"If you want to change working text:
-"let g:tomato#remind = "☻" (" \uf003 " if you are using awesome-terminal-fonts)
-"If you want to change rest text:
-"let g:tomato#restinfo = "☺" (" \ue1f1 " if you are using awesome-terminal-fonts)
-"If you want to enable clock:
-let g:tomato#show_clock = 1
-"If you want to show a count down:
-let g:tomato#show_clock = 1
-let g:tomato#show_count_down = 1
