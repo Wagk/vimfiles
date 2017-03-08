@@ -104,6 +104,7 @@ call plug#begin()
 	Plug 'xolox/vim-misc'
 	Plug 'xolox/vim-notes'
 	Plug 'xolox/vim-session'
+	Plug 'vim-scripts/a.vim'
 
 call plug#end()
 
