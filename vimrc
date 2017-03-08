@@ -235,7 +235,7 @@ let c_no_comment_fold = 1
 " Realtime updates
 set autoread
 
-set guioptions=
+set guioptions=c
 " set guioptions-=m  "remove menu bar
 " set guioptions-=T  "remove toolbar
 " set guioptions-=r  "remove right-hand scroll bar
@@ -405,9 +405,9 @@ let g:tomato#rest_time = 20 * 60
 "If you want to change language(English or Chinese):
 "let g:tomato#lang = 'chinese'
 "If you want to change working text:
-"let g:tomato#remind = "?" (" \uf003 " if you are using awesome-terminal-fonts)
+"let g:tomato#remind = "☻" (" \uf003 " if you are using awesome-terminal-fonts)
 "If you want to change rest text:
-"let g:tomato#restinfo = "?" (" \ue1f1 " if you are using awesome-terminal-fonts)
+"let g:tomato#restinfo = "☺" (" \ue1f1 " if you are using awesome-terminal-fonts)
 "If you want to enable clock:
 let g:tomato#show_clock = 1
 "If you want to show a count down:
