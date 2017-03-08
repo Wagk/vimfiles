@@ -314,6 +314,7 @@ let g:airline#extensions#clock#updatetime = 500
 " Statusline
 set statusline=%{fugitive#statusline()}
 nnoremap <silent> <leader>\ :Gstatus<CR>
+nnoremap <silent> <leader>} :Gpush<CR>
 
 " nerdtree-git-plugin things
 let g:NERDTreeIndicatorMapCustom = {
