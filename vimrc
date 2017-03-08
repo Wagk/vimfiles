@@ -389,6 +389,9 @@ nnoremap <NL> i<CR><ESC>
 let g:SuperTabMappingForward = '<s-tab>'
 let g:SuperTabMappingBackward = '<tab>'
 
+" Tagbar things
+nnoremap <silent> <leader>N :TagbarToggle<CR>
+
 " indent guides
 nnoremap <leader>i :IndentGuidesToggle<CR>
 
