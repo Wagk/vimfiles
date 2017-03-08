@@ -21,19 +21,6 @@ syntax on
 " vim-plug
 call plug#begin()
 
-	"Plug 'JarrodCTaylor/vim-shell-executor'
-	"Plug 'Shougo/vimshell.vim'
-	"Plug 'chrisbra/NrrwRgn'
-	"Plug 'chrisbra/changesPlugin' "gutter highlighting like gitgutter, but blockwise
-	"Plug 'dhruvasagar/vim-dotoo'
-	"Plug 'https:/hub.com/freitass/todo.txt-vim'
-	"Plug 'idbrii/AsyncCommand'
-	"Plug 'jamessan/vim-gnupg'
-	"Plug 'jceb/vim-orgmode'
-	"Plug 'joonty/vim-do'
-	"Plug 'mtth/scratch.vim'
-	"Plug 'thanthese/Tortoise-Typing' " needs python 2.7
-	"Plug 'uguu-org/vim-matrix-screensaver'
 	Plug 'AlessandroYorba/Despacio'
 	Plug 'AndrewRadev/splitjoin.vim'
 	Plug 'Chiel92/vim-autoformat'
