@@ -15,16 +15,12 @@
 " have made, as well as sanely reset options when re-sourcing .vimrc
 set nocompatible
 
-" Attempt to determine the type of a file based on its name and possibly its
-" contents. Use this to allow intelligent auto-indenting for each filetype,
-" and for plugins that are filetype specific.
-filetype indent plugin on
-
 " Enable syntax highlighting
 syntax on
 
 " vim-plug
 call plug#begin()
+
 	"Plug 'JarrodCTaylor/vim-shell-executor'
 	"Plug 'Shougo/vimshell.vim'
 	"Plug 'chrisbra/NrrwRgn'
@@ -38,6 +34,7 @@ call plug#begin()
 	"Plug 'mtth/scratch.vim'
 	"Plug 'thanthese/Tortoise-Typing' " needs python 2.7
 	"Plug 'uguu-org/vim-matrix-screensaver'
+
 	Plug 'AlessandroYorba/Despacio'
 	Plug 'AndrewRadev/splitjoin.vim'
 	Plug 'Chiel92/vim-autoformat'
@@ -107,7 +104,15 @@ call plug#begin()
 	Plug 'xolox/vim-misc'
 	Plug 'xolox/vim-notes'
 	Plug 'xolox/vim-session'
+	Plug 'SirVer/ultisnips'
+	Plug 'honza/vim-snippets'
+
 call plug#end()
+
+" Attempt to determine the type of a file based on its name and possibly its
+" contents. Use this to allow intelligent auto-indenting for each filetype,
+" and for plugins that are filetype specific.
+filetype indent plugin on
 
 "------------------------------------------------------------
 " Must have options {{{1
@@ -314,7 +319,7 @@ let g:airline#extensions#clock#updatetime = 500
 " Statusline
 set statusline=%{fugitive#statusline()}
 nnoremap <silent> <leader>\ :Gstatus<CR>
-nnoremap <silent> <leader>} :Gpush<CR>
+nnoremap <silent> <leader>] :Gpush<CR>
 
 " nerdtree-git-plugin things
 let g:NERDTreeIndicatorMapCustom = {
@@ -406,3 +411,12 @@ noremap <leader>c :call asyncrun#quickfix_toggle(8)<cr>
 augroup vimrc
 	autocmd User AsyncRunStart call asyncrun#quickfix_toggle(8, 1)
 augroup END
+
+" Ultisnips
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
