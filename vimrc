@@ -30,6 +30,7 @@ call plug#begin()
 	Plug 'airblade/vim-gitgutter'
 	Plug 'altercation/vim-colors-solarized'
 	Plug 'chrisbra/Recover.vim'
+	Plug 'christoomey/vim-tmux-navigator'
 	Plug 'ctrlpvim/ctrlp.vim'
 	Plug 'easymotion/vim-easymotion'
 	Plug 'ekalinin/dockerfile.vim'
@@ -42,16 +43,23 @@ call plug#begin()
 	Plug 'honza/vim-snippets' | Plug 'SirVer/ultisnips'
 	Plug 'idanarye/vim-terminalogy'
 	Plug 'itchyny/calendar.vim'
+	Plug 'janko-m/vim-test'                 " Run test cases
 	Plug 'jceb/vim-orgmode'
 	Plug 'junegunn/vim-easy-align'
 	Plug 'kamwitsta/mythos'
 	Plug 'kshenoy/vim-signature'
 	Plug 'majutsushi/tagbar'
 	Plug 'mattn/emmet-vim'
+	Plug 'mattn/webapi-vim'                 " curl/wget tooling
+	Plug 'matze/vim-move'                   " Move visual blocks
+	Plug 'mbbill/undotree'                  " undo tree (like gundo)
+	Plug 'mhinz/vim-startify'               " startup page
 	Plug 'michaeljsmith/vim-indent-object'
 	Plug 'myusuf3/numbers.vim'
 	Plug 'nathanaelkane/vim-indent-guides'
+	Plug 'nelstrom/vim-visual-star-search'  " use  # and * on visual selections
 	Plug 'ntpeters/vim-better-whitespace'
+	Plug 'octol/vim-cpp-enhanced-highlight' " exactly what it says on the tin
 	Plug 'othree/html5.vim'
 	Plug 'pangloss/vim-javascript'
 	Plug 'pseewald/vim-anyfold'
@@ -82,7 +90,9 @@ call plug#begin()
 	Plug 'vim-airline/vim-airline'
 	Plug 'vim-airline/vim-airline-themes'
 	Plug 'vim-scripts/DrawIt'
+	Plug 'vim-scripts/OmniCppComplete'      " Look at the tin
 	Plug 'vim-scripts/SyntaxRange'
+	Plug 'vim-scripts/a.vim'                " Swap between source and header files
 	Plug 'vim-scripts/utl.vim'
 	Plug 'vim-syntastic/syntastic'
 	Plug 'vimwiki/vimwiki'
@@ -91,16 +101,6 @@ call plug#begin()
 	Plug 'xolox/vim-misc'
 	Plug 'xolox/vim-notes'
 	Plug 'xolox/vim-session'
-	Plug 'vim-scripts/a.vim'                " Swap between source and header files
-	Plug 'janko-m/vim-test'                 " Run test cases
-	Plug 'christoomey/vim-tmux-navigator'
-	Plug 'mattn/webapi-vim'                 " curl/wget tooling
-	Plug 'mbbill/undotree'                  " undo tree (like gundo)
-	Plug 'mhinz/vim-startify'               " startup page
-	Plug 'octol/vim-cpp-enhanced-highlight' " exactly what it says on the tin
-	Plug 'vim-scripts/OmniCppComplete'      " Look at the tin
-	Plug 'nelstrom/vim-visual-star-search'  " use  # and * on visual selections
-	Plug 'matze/vim-move'                   " Move visual blocks
 
 call plug#end()
 
