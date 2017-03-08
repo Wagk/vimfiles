@@ -74,6 +74,7 @@ call plug#begin()
 	Plug 'romainl/vim-cool'
 	Plug 'scrooloose/nerdcommenter'
 	Plug 'scrooloose/nerdtree'
+	Plug 'sheerun/vim-polyglot'
 	Plug 'skywind3000/asyncrun.vim'
 	Plug 'terryma/vim-expand-region'
 	Plug 'terryma/vim-multiple-cursors'
@@ -106,7 +107,6 @@ call plug#begin()
 	Plug 'xolox/vim-misc'
 	Plug 'xolox/vim-notes'
 	Plug 'xolox/vim-session'
-	Plug 'sheerun/vim-polyglot'
 call plug#end()
 
 "------------------------------------------------------------
