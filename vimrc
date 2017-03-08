@@ -34,7 +34,6 @@ call plug#begin()
 	"Plug 'mtth/scratch.vim'
 	"Plug 'thanthese/Tortoise-Typing' " needs python 2.7
 	"Plug 'uguu-org/vim-matrix-screensaver'
-
 	Plug 'AlessandroYorba/Despacio'
 	Plug 'AndrewRadev/splitjoin.vim'
 	Plug 'Chiel92/vim-autoformat'
@@ -53,6 +52,7 @@ call plug#begin()
 	Plug 'flazz/vim-colorschemes'
 	Plug 'gcorne/phpfolding.vim'
 	Plug 'guns/vim-sexp'
+	Plug 'honza/vim-snippets' | Plug 'SirVer/ultisnips'
 	Plug 'idanarye/vim-terminalogy'
 	Plug 'itchyny/calendar.vim'
 	Plug 'jceb/vim-orgmode'
@@ -104,8 +104,6 @@ call plug#begin()
 	Plug 'xolox/vim-misc'
 	Plug 'xolox/vim-notes'
 	Plug 'xolox/vim-session'
-	Plug 'SirVer/ultisnips'
-	Plug 'honza/vim-snippets'
 
 call plug#end()
 
