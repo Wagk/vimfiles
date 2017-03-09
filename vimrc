@@ -92,7 +92,7 @@ call plug#begin()
 	Plug 'vim-scripts/DrawIt'
 	Plug 'vim-scripts/OmniCppComplete'                  " Look at the tin
 	Plug 'vim-scripts/SyntaxRange'
-	Plug 'derekwyatt/vim-fswitch'                            " Swap between source and header files
+	Plug 'derekwyatt/vim-fswitch'                       " Swap between source and header files
 	Plug 'vim-scripts/utl.vim'
 	Plug 'vim-syntastic/syntastic'
 	Plug 'vimwiki/vimwiki'
@@ -102,7 +102,7 @@ call plug#begin()
 	Plug 'xolox/vim-notes'
 	Plug 'xolox/vim-session'
 	Plug 'xolox/vim-reload'                             " automatically reload vimscripts
-	Plug 'AndrewRadev/switch.vim' " switches segments of text with predefined replacements
+	Plug 'AndrewRadev/switch.vim'                       " switches segments of text with predefined replacements
 
 call plug#end()
 
