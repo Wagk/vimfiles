@@ -416,8 +416,8 @@ let g:UltiSnipsEditSplit="vertical"
 
 " unmap annoying bindings from a.vim
 " look at :IHN
-iunmap  <leader>ihn
+iunmap <leader>ihn
 " no substitute
-iunmap  <leader>is
+iunmap <leader>is
 " look at :IH
-iunmap  <leader>ih
+iunmap <leader>ih
