@@ -101,6 +101,7 @@ call plug#begin()
 	Plug 'xolox/vim-misc'
 	Plug 'xolox/vim-notes'
 	Plug 'xolox/vim-session'
+	Plug 'xolox/vim-reload'                             " automatically reload vimscripts
 
 call plug#end()
 
@@ -393,9 +394,6 @@ let g:SuperTabMappingBackward = '<tab>'
 
 " Tagbar things
 nnoremap <silent> <leader>m :TagbarToggle<CR>
-
-" indent guides
-nnoremap <silent> <leader>i :IndentGuidesToggle<CR>
 
 " NERDTree things
 nnoremap <silent> <leader>n :NERDTreeToggle<CR>
