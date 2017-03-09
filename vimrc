@@ -40,26 +40,26 @@ call plug#begin()
 	Plug 'flazz/vim-colorschemes'
 	Plug 'gcorne/phpfolding.vim'
 	Plug 'guns/vim-sexp'
-	Plug 'honza/vim-snippets' | Plug 'SirVer/ultisnips'
+	Plug 'honza/vim-snippets' | Plug 'SirVer/ultisnips' " snippet plugin
 	Plug 'idanarye/vim-terminalogy'
 	Plug 'itchyny/calendar.vim'
-	Plug 'janko-m/vim-test'                 " Run test cases
+	Plug 'janko-m/vim-test'                             " Run test cases
 	Plug 'jceb/vim-orgmode'
 	Plug 'junegunn/vim-easy-align'
 	Plug 'kamwitsta/mythos'
 	Plug 'kshenoy/vim-signature'
 	Plug 'majutsushi/tagbar'
 	Plug 'mattn/emmet-vim'
-	Plug 'mattn/webapi-vim'                 " curl/wget tooling
-	Plug 'matze/vim-move'                   " Move visual blocks
-	Plug 'mbbill/undotree'                  " undo tree (like gundo)
-	Plug 'mhinz/vim-startify'               " startup page
+	Plug 'mattn/webapi-vim'                             " curl/wget tooling
+	Plug 'matze/vim-move'                               " Move visual blocks
+	Plug 'mbbill/undotree'                              " undo tree (like gundo)
+	Plug 'mhinz/vim-startify'                           " startup page
 	Plug 'michaeljsmith/vim-indent-object'
 	Plug 'myusuf3/numbers.vim'
 	Plug 'nathanaelkane/vim-indent-guides'
-	Plug 'nelstrom/vim-visual-star-search'  " use  # and * on visual selections
+	Plug 'nelstrom/vim-visual-star-search'              " use  # and * on visual selections
 	Plug 'ntpeters/vim-better-whitespace'
-	Plug 'octol/vim-cpp-enhanced-highlight' " exactly what it says on the tin
+	Plug 'octol/vim-cpp-enhanced-highlight'             " exactly what it says on the tin
 	Plug 'othree/html5.vim'
 	Plug 'pangloss/vim-javascript'
 	Plug 'pseewald/vim-anyfold'
@@ -90,9 +90,9 @@ call plug#begin()
 	Plug 'vim-airline/vim-airline'
 	Plug 'vim-airline/vim-airline-themes'
 	Plug 'vim-scripts/DrawIt'
-	Plug 'vim-scripts/OmniCppComplete'      " Look at the tin
+	Plug 'vim-scripts/OmniCppComplete'                  " Look at the tin
 	Plug 'vim-scripts/SyntaxRange'
-	Plug 'vim-scripts/a.vim'                " Swap between source and header files
+	Plug 'vim-scripts/a.vim'                            " Swap between source and header files
 	Plug 'vim-scripts/utl.vim'
 	Plug 'vim-syntastic/syntastic'
 	Plug 'vimwiki/vimwiki'
@@ -415,3 +415,11 @@ let g:UltiSnipsJumpBackwardTrigger = "<tab>"
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
+
+" unmap annoying bindings from a.vim
+" look at :IHN
+iunmap  <leader>ihn
+" no substitute
+iunmap  <leader>is
+" look at :IH
+iunmap  <leader>ih
