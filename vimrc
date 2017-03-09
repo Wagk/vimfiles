@@ -92,7 +92,7 @@ call plug#begin()
 	Plug 'vim-scripts/DrawIt'
 	Plug 'vim-scripts/OmniCppComplete'                  " Look at the tin
 	Plug 'vim-scripts/SyntaxRange'
-	Plug 'vim-scripts/a.vim'                            " Swap between source and header files
+	Plug 'derekwyatt/vim-fswitch'                            " Swap between source and header files
 	Plug 'vim-scripts/utl.vim'
 	Plug 'vim-syntastic/syntastic'
 	Plug 'vimwiki/vimwiki'
@@ -102,6 +102,7 @@ call plug#begin()
 	Plug 'xolox/vim-notes'
 	Plug 'xolox/vim-session'
 	Plug 'xolox/vim-reload'                             " automatically reload vimscripts
+	Plug 'AndrewRadev/switch.vim' " switches segments of text with predefined replacements
 
 call plug#end()
 
@@ -414,10 +415,5 @@ let g:UltiSnipsJumpBackwardTrigger = "<tab>"
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
 
-" unmap annoying bindings from a.vim
-" look at :IHN
-iunmap <leader>ihn
-" no substitute
-iunmap <leader>is
-" look at :IH
-iunmap <leader>ih
+" switch.vim bindings
+nnoremap <leader>s :Switch<CR>
