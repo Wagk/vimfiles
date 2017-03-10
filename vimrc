@@ -30,7 +30,6 @@ call plug#begin()
 	Plug 'airblade/vim-gitgutter'
 	Plug 'altercation/vim-colors-solarized'
 	Plug 'chrisbra/Recover.vim'
-	Plug 'christoomey/vim-tmux-navigator'
 	Plug 'ctrlpvim/ctrlp.vim'
 	Plug 'easymotion/vim-easymotion'
 	Plug 'ekalinin/dockerfile.vim'
@@ -103,6 +102,7 @@ call plug#begin()
 	Plug 'xolox/vim-session'
 	Plug 'xolox/vim-reload'                             " automatically reload vimscripts
 	Plug 'AndrewRadev/switch.vim'                       " switches segments of text with predefined replacements
+	Plug 'editorconfig/editorconfig-vim'
 
 call plug#end()
 
@@ -400,11 +400,12 @@ nnoremap <silent> <leader>m :TagbarToggle<CR>
 nnoremap <silent> <leader>n :NERDTreeToggle<CR>
 
 " AsyncRun
-nnoremap <leader>! :AsyncRun<Space>
+nnoremap \! :AsyncRun<Space>
 noremap <leader>c :call asyncrun#quickfix_toggle(8)<cr>
 augroup vimrc
 	autocmd User AsyncRunStart call asyncrun#quickfix_toggle(8, 1)
 augroup END
+let g:asyncrun_timer = -1
 
 " Ultisnips
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
@@ -417,3 +418,8 @@ let g:UltiSnipsEditSplit="vertical"
 
 " switch.vim bindings
 nnoremap <leader>s :Switch<CR>
+
+" Editorconfig things
+" Note that this requires the installation of an external package https://github.com/editorconfig/editorconfig-core-c
+let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
+
