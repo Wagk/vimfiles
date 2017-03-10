@@ -23,6 +23,7 @@ call plug#begin()
 
 	Plug 'AlessandroYorba/Despacio'
 	Plug 'AndrewRadev/splitjoin.vim'
+	Plug 'AndrewRadev/switch.vim'                       " switches segments of text with predefined replacements
 	Plug 'Chiel92/vim-autoformat'
 	Plug 'MarcWeber/vim-addon-mw-utils'
 	Plug 'Raimondi/delimitMate'
@@ -31,7 +32,9 @@ call plug#begin()
 	Plug 'altercation/vim-colors-solarized'
 	Plug 'chrisbra/Recover.vim'
 	Plug 'ctrlpvim/ctrlp.vim'
+	Plug 'derekwyatt/vim-fswitch'                       " Swap between source and header files
 	Plug 'easymotion/vim-easymotion'
+	Plug 'editorconfig/editorconfig-vim'
 	Plug 'ekalinin/dockerfile.vim'
 	Plug 'elzr/vim-json'
 	Plug 'enricobacis/vim-airline-clock'
@@ -91,7 +94,6 @@ call plug#begin()
 	Plug 'vim-scripts/DrawIt'
 	Plug 'vim-scripts/OmniCppComplete'                  " Look at the tin
 	Plug 'vim-scripts/SyntaxRange'
-	Plug 'derekwyatt/vim-fswitch'                       " Swap between source and header files
 	Plug 'vim-scripts/utl.vim'
 	Plug 'vim-syntastic/syntastic'
 	Plug 'vimwiki/vimwiki'
@@ -99,10 +101,8 @@ call plug#begin()
 	Plug 'wesQ3/vim-windowswap'
 	Plug 'xolox/vim-misc'
 	Plug 'xolox/vim-notes'
-	Plug 'xolox/vim-session'
 	Plug 'xolox/vim-reload'                             " automatically reload vimscripts
-	Plug 'AndrewRadev/switch.vim'                       " switches segments of text with predefined replacements
-	Plug 'editorconfig/editorconfig-vim'
+	Plug 'xolox/vim-session'
 
 call plug#end()
 
@@ -220,6 +220,9 @@ set pastetoggle=<F11>
 " Let me paste things repeatedly
 xnoremap p pgvy
 xnoremap P Pgvy
+
+" Normalize Y operation with D
+:map Y y$
 
 " Font and Fontsize
 set guifont=Consolas:h11
@@ -410,8 +413,8 @@ let g:asyncrun_timer = -1
 " Ultisnips
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger = "<s-tab>"
-let g:UltiSnipsJumpBackwardTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
