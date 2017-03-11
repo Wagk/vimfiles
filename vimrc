@@ -38,7 +38,7 @@ call plug#begin()
 	Plug 'ekalinin/dockerfile.vim'
 	Plug 'elzr/vim-json'
 	Plug 'enricobacis/vim-airline-clock'
-	Plug 'ervandew/supertab'
+	Plug 'ervandew/supertab' " Suspected collisions with UltiSnips
 	Plug 'flazz/vim-colorschemes'
 	Plug 'gcorne/phpfolding.vim'
 	Plug 'guns/vim-sexp'
@@ -392,9 +392,9 @@ let g:anyfold_activate=1
 " maps ctrl-J to break a line at that point
 nnoremap <NL> i<CR><ESC>
 
-"s supertab things
-let g:SuperTabMappingForward = '<s-tab>'
-let g:SuperTabMappingBackward = '<tab>'
+""s supertab things
+"let g:SuperTabMappingForward = '<s-tab>'
+"let g:SuperTabMappingBackward = '<tab>'
 
 " Tagbar things
 nnoremap <silent> <leader>m :TagbarToggle<CR>
@@ -415,14 +415,17 @@ let g:asyncrun_timer = -1
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
-
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsSnippetsDir = 'localsnippets'
+let g:UltiSnipsSnippetDirectories = ['UltiSnips', 'localsnippets']
 
 " switch.vim bindings
 nnoremap <leader>s :Switch<CR>
 
 " Editorconfig things
-" Note that this requires the installation of an external package https://github.com/editorconfig/editorconfig-core-c
+" Note that this requires the installation of an external package
+" https://github.com/editorconfig/editorconfig-core-c
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
+
 
