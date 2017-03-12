@@ -392,9 +392,9 @@ let g:anyfold_activate=1
 " maps ctrl-J to break a line at that point
 nnoremap <NL> i<CR><ESC>
 
-""s supertab things
-"let g:SuperTabMappingForward = '<s-tab>'
-"let g:SuperTabMappingBackward = '<tab>'
+"s supertab things
+let g:SuperTabMappingForward = '<s-tab>'
+let g:SuperTabMappingBackward = '<tab>'
 
 " Tagbar things
 nnoremap <silent> <leader>m :TagbarToggle<CR>
@@ -413,8 +413,6 @@ let g:asyncrun_timer = -1
 " Ultisnips
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger = "<tab>"
-let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsSnippetsDir = 'localsnippets'
