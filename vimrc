@@ -103,6 +103,12 @@ call plug#begin()
 	Plug 'xolox/vim-notes'
 	Plug 'xolox/vim-reload'                             " automatically reload vimscripts
 	Plug 'xolox/vim-session'
+	Plug 'junegunn/vim-peekaboo'
+
+	" Writing plugins
+	Plug 'junegunn/goyo.vim'
+	Plug 'junegunn/limelight.vim'
+	Plug 'junegunn/vim-online-thesaurus'
 
 call plug#end()
 
@@ -150,7 +156,7 @@ set hlsearch
 " Modelines have historically been a source of security vulnerabilities. As
 " such, it may be a good idea to disable them and use the securemodelines
 " script, <http://www.vim.org/scripts/script.php?script_id=1876>.
-" set nomodeline
+ set nomodeline
 
 
 "------------------------------------------------------------
@@ -252,9 +258,6 @@ set guioptions=c
 
 " yank straight to system clipboard
 set clipboard=unnamed
-
-" some security vulnerability
-set nomodeline
 
 " Window launch size configuration
 if has("gui_running")
@@ -415,8 +418,17 @@ let g:asyncrun_timer = -1
 let g:UltiSnipsExpandTrigger="<tab>"
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
-let g:UltiSnipsSnippetsDir = 'localsnippets'
-let g:UltiSnipsSnippetDirectories = ['UltiSnips', 'localsnippets']
+" really ugly hack to make the Utilsnip snippet hack work on both windows and
+" linux
+if has('win32')
+	set runtimepath+=~/vimfiles/localsnippets
+	let g:UltiSnipsSnippetsDir = '~/vimfiles/localsnippets'
+	let g:UltiSnipsSnippetDirectories = ['~/vimfiles/Ultisnips', 'UltiSnips', 'localsnippets']
+else
+	set runtimepath+=~/.vim/localsnippets
+	let g:UltiSnipsSnippetsDir = '~/.vim/localsnippets'
+	let g:UltiSnipsSnippetDirectories = ['~/.vim/Ultisnips', 'UltiSnips', 'localsnippets']
+endif
 
 " switch.vim bindings
 nnoremap <leader>s :Switch<CR>
