@@ -70,7 +70,7 @@ call plug#begin()
 	Plug 'scrooloose/nerdtree'
 	Plug 'sheerun/vim-polyglot'
 	Plug 'skywind3000/asyncrun.vim'
-	Plug 'terryma/vim-expand-region'
+	"Plug 'terryma/vim-expand-region'
 	Plug 'terryma/vim-multiple-cursors'
 	Plug 'tmhedberg/SimpylFold'
 	Plug 'tomasiser/vim-code-dark'
@@ -103,7 +103,11 @@ call plug#begin()
 	Plug 'xolox/vim-notes'
 	Plug 'xolox/vim-reload'                             " automatically reload vimscripts
 	Plug 'xolox/vim-session'
-	Plug 'junegunn/vim-peekaboo'
+	Plug 'junegunn/vim-peekaboo' " Register/macro display sidebar
+
+	" Todo plugins
+	Plug 'freitass/todo.txt-vim'
+	Plug 'blindFS/vim-taskwarrior'
 
 	" Writing plugins
 	Plug 'junegunn/goyo.vim'
