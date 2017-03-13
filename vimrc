@@ -21,7 +21,12 @@ syntax on
 " vim-plug
 call plug#begin()
 
+	" colorschemes
 	Plug 'AlessandroYorba/Despacio'
+	Plug 'altercation/vim-colors-solarized'
+	Plug 'flazz/vim-colorschemes'
+	Plug 'vim-airline/vim-airline-themes'
+
 	Plug 'AndrewRadev/splitjoin.vim'
 	Plug 'AndrewRadev/switch.vim'                       " switches segments of text with predefined replacements
 	Plug 'Chiel92/vim-autoformat'
@@ -29,7 +34,6 @@ call plug#begin()
 	Plug 'Raimondi/delimitMate'
 	Plug 'Xuyuanp/nerdtree-git-plugin'
 	Plug 'airblade/vim-gitgutter'
-	Plug 'altercation/vim-colors-solarized'
 	Plug 'chrisbra/Recover.vim'
 	Plug 'ctrlpvim/ctrlp.vim'
 	Plug 'derekwyatt/vim-fswitch'                       " Swap between source and header files
@@ -39,7 +43,6 @@ call plug#begin()
 	Plug 'elzr/vim-json'
 	Plug 'enricobacis/vim-airline-clock'
 	Plug 'ervandew/supertab' " Suspected collisions with UltiSnips
-	Plug 'flazz/vim-colorschemes'
 	Plug 'gcorne/phpfolding.vim'
 	Plug 'guns/vim-sexp'
 	Plug 'honza/vim-snippets' | Plug 'SirVer/ultisnips' " snippet plugin
@@ -90,7 +93,6 @@ call plug#begin()
 	Plug 'tpope/vim-surround'
 	Plug 'tpope/vim-unimpaired'
 	Plug 'vim-airline/vim-airline'
-	Plug 'vim-airline/vim-airline-themes'
 	Plug 'vim-scripts/DrawIt'
 	Plug 'vim-scripts/OmniCppComplete'                  " Look at the tin
 	Plug 'vim-scripts/SyntaxRange'
@@ -420,10 +422,8 @@ let g:asyncrun_timer = -1
 " Ultisnips
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<tab>"
-" If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
-" really ugly hack to make the Utilsnip snippet hack work on both windows and
-" linux
+let g:UltiSnipsEditSplit="vertical" " If you want :UltiSnipsEdit to split your window
+" really ugly hack to make the Utilsnip snippet hack work on both windows and linux
 if has('win32')
 	set runtimepath+=~/vimfiles/localsnippets
 	let g:UltiSnipsSnippetsDir = '~/vimfiles/localsnippets'
