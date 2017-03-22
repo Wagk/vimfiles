@@ -1,3 +1,4 @@
+
 " URL: http://vim.wikia.com/wiki/Example_vimrc
 " Authors: http://vim.wikia.com/wiki/Vim_on_Freenode
 " Description: A minimal, but feature rich, example .vimrc. If you are a
@@ -327,7 +328,7 @@ let g:airline#extensions#clock#updatetime = 500
 
 " Statusline
 set statusline=%{fugitive#statusline()}
-nnoremap <silent> <leader>\ :Gstatus<CR>
+nnoremap <silent> <leader>, :Gstatus<CR>
 nnoremap <silent> <leader>] :Gpush<CR>
 nnoremap <silent> <leader>[ :Gpull<CR>
 
